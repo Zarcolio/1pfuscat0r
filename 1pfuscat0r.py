@@ -15,7 +15,7 @@ def SignalHandler(sig, frame):
 
 def GetArguments():
     # Get some commandline arguments:
-    argParser=argparse.ArgumentParser(description='Use 1pfuscat0r to obfuscate a given IP address. Either supply an IP as an argument or through standard input. By default valid and invalid IP addresses are shown.')
+    argParser=argparse.ArgumentParser(description='Use 1pfuscat0r to obfuscate a given IP address. Either supply an IP address as an argument or through standard input. By default valid and invalid IP addresses are shown.')
     argParser.add_argument('-i', metavar="<ipaddress>", help='Supply a valid IP address to obfuscate')
     argParser.add_argument('-o', metavar="<file>", help='Supply an output file')
     return argParser.parse_args()
