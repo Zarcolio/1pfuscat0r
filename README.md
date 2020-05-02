@@ -11,7 +11,8 @@ With 1pfuscat0r is easy to generate obfuscated versions based on IP addresses pr
 ```
 usage: 1pfuscat0r [-h] [-i <ipaddress>] [-o <file>]
 
-Use 1pfuscat0r to obfuscate a given IP address. Either supply an IP as an argument or through standard input. By default valid and invalid IP addresses are shown.
+Use 1pfuscat0r to obfuscate a given IP address. Either supply an IP as an argument or through standard input. 
+By default valid and invalid IP addresses are shown.
 
 optional arguments:
   -h, --help      show this help message and exit
@@ -24,7 +25,7 @@ Want to convert multiple IP addresses and save output in a separate file:
 cat ipaddresses.txt|1pfuscat0r -o output.txt 
 ```
 Want to convert multiple IP addresses and redirect it to a tool that doesn't take input from standard input, for example ping?
-Install [2cmd] https://github.com/Zarcolio/2cmd and create 1pfuscat0r-ping.2cmd:
+Install [2cmd](https://github.com/Zarcolio/2cmd) and create 1pfuscat0r-ping.2cmd:
 ```
 ping $2cmd$ -c 1
 ```
