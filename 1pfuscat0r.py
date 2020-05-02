@@ -37,8 +37,8 @@ def PrintObfuscatedAddresses(sIpAddress):
 
     lParts = sIpAddress.split('.')
     
-    sZeroedParts = ""
-    for j in range(0, 4):
+    sZeroedParts = lParts[0] + "."
+    for j in range(1, 4):
         iRandom = random.randint(0,5)
         if j < 3: sDot = "."
         else: sDot = ""
