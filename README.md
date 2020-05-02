@@ -11,7 +11,7 @@ With 1pfuscat0r is easy to generate obfuscated versions based on IP addresses pr
 ```
 usage: 1pfuscat0r [-h] [-i <ipaddress>] [-o <file>]
 
-Use 1pfuscat0r to obfuscate a given IP address. Either supply an IP as an argument or through standard input. 
+Use 1pfuscat0r to obfuscate a given IP address. Either supply an IP address as an argument or through standard input. 
 By default valid and invalid IP addresses are shown.
 
 optional arguments:
