@@ -5,7 +5,7 @@ A tool to automatically generate alternative IP representations, a rewritten ver
 With 1pfuscat0r is easy to generate obfuscated versions based on IP addresses. Improvents are:
 * provide IP addresses through standard input. It's easy to redirect the contents of a file with several IP addresses to this tool.
 * The output is clean so it can be redirected to another tool.
-* If the target tool of choice doesn't have support for delays, this script does.
+* If the target tool in a piped command doesn't have support for delays, this script does.
 * And it's written for Python 3.
 
 # Install
