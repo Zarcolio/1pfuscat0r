@@ -36,4 +36,4 @@ cat ipaddresses.txt|1pfuscat0r|2cmd 1pfuscat0r-ping.2cmd
 ```
 
 # Contribute?
-Do you have some usefull additions to the script or to the list of dorkable websites, please send in a pull request to help make this script better :)
+Do you have some usefull additions to the script, please send in a pull request to help make this script better :)
