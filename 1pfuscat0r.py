@@ -5,6 +5,7 @@ import argparse
 import re, random
 import sys
 import signal
+from time import sleep
 
 __version__ = '0.1'
 
@@ -16,6 +17,7 @@ def SignalHandler(sig, frame):
 def GetArguments():
     # Get some commandline arguments:
     argParser=argparse.ArgumentParser(description='Use 1pfuscat0r to obfuscate a given IP address. Either supply an IP address as an argument or through standard input. By default valid and invalid IP addresses are shown.')
+    argParser.add_argument('-d', metavar="<seconds>", help='Supply a delay in seconds.')
     argParser.add_argument('-i', metavar="<ipaddress>", help='Supply a valid IP address to obfuscate')
     argParser.add_argument('-o', metavar="<file>", help='Supply an output file')
     return argParser.parse_args()
@@ -156,16 +158,24 @@ def PrintObfuscatedAddresses(sIpAddress):
 
     if lArgs.o:
         fOut = open(lArgs.o, 'w', buffering=1)
-        
+    
+    global bFirst   # Don't have delay for first time.
     for sItem in lEverything:
+        if lArgs.d and bFirst == False:
+            sleep (int(lArgs.d))
+        else:
+            bFirst = False
+
         print(sItem)
         if lArgs.o:
             fOut.write(str(sItem) + "\n")
 
 lArgs = GetArguments()
-    
+bFirst = True
+
 def main():
     signal.signal(signal.SIGINT, SignalHandler)
+    
     if lArgs.i:
         if not ValidateIpAddress(lArgs.i):
             exit(2)
