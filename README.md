@@ -2,7 +2,11 @@
 A tool to automatically generate alternative IP representations, a rewritten version of IPFuscator: https://github.com/vysecurity/IPFuscator
 
 # Why 1pfuscat0r
-With 1pfuscat0r is easy to generate obfuscated versions based on IP addresses provided through standard input. It's easy to redirect the contents of a file with several IP addresses to this tool. The output is clean so it can be redirected to another tool. And it's written for Python 3.
+With 1pfuscat0r is easy to generate obfuscated versions based on IP addresses. Improvents are:
+* provide IP addresses through standard input. It's easy to redirect the contents of a file with several IP addresses to this tool.
+* The output is clean so it can be redirected to another tool.
+* If the target tool of choice doesn't have support for delays, this script does.
+* And it's written for Python 3.
 
 # Install
 1pfuscat0r should be able to run with a default Kali Linux installation without installing additional Python packages. If you're running into trouble running 1pfuscat0r, please drop me an issue and I'll try to fix it :)
@@ -16,6 +20,7 @@ By default valid and invalid IP addresses are shown.
 
 optional arguments:
   -h, --help      show this help message and exit
+  -d <seconds>    Supply a delay in seconds.
   -i <ipaddress>  Supply a valid IP address to obfuscate
   -o <file>       Supply an output file
 ```
